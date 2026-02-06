@@ -1,0 +1,59 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset + full-width layout */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b12;
+  color: #ffffff;
+}
+
+/* Fix: sections don't hide behind fixed navbar */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Safety: images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+ :root[data-theme="dark"] {
+  --bg: #0b0b12;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.78);
+  --card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.10);
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f7ff;
+  --text: #0b0b12;
+  --muted: rgba(10,10,15,0.70);
+  --card: rgba(10,10,15,0.04);
+  --border: rgba(10,10,15,0.10);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html {
+  scroll-behavior: smooth;
+}
